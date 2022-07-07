@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/fireStore.css">
+        <link rel="stylesheet" href="./css/responsive.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@1,700&amp;display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Arimo:ital@1&amp;display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=League+Gothic&amp;display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&amp;display=swap" rel="stylesheet">
+        <title>Drewanz Motors</title>
+    </head>
+    
+    <body>
+        <div class="on-background" id="onBackground">
+             
+             <img src="./img/logo.png">
+            
+             <div>
+             <p><b>Distribuidora de Repuestos y Autopartes</b></p>
+             <button><a href="#appenIn">Comprar</a></button> 
+             </div>
+         </div>
+     
+         <header>
+             
+             <a href="#" class="logo"><img src="./img/logo.png" alt=""></a>
+             <div><ul>
+                 <li><a href="#">Inicio</a></li>
+     
+                 <li><a href="#appenIn" id="cartSidebar">Catálogo</a></li>
+                 
+                 <li><a href="#appenIn">Productos</a></li>
+                 
+                 <li><a href="#footerId">Contacto</a></li>
+                 
+             </ul>
+             </div> 
+             
+             <button id="svgList">
+                 
+                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svgList" viewBox="0 0 16 16">
+                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path></svg>
+                 
+                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svgCaretUp" viewBox="0 0 16 16">
+                 <path d="M3.204 11h9.592L8 5.519 3.204 11zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z"></path></svg>
+                   
+             </button>
+         </header>
+     
+         <main>
+              
+             <div class="carts">           
+             <div class="image-container" id="imageContainer"></div>
+             
+             <div class="sidebar">
+                 <button id="toggleBtn" class="toggle-btn">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="caretRight" viewBox="0 0 16 16">
+                         <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path>
+                     </svg>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="caretLeft" viewBox="0 0 16 16">
+                         <path d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"></path>
+                     </svg>
+                     
+                 </button>
+         
+                 <div class="buttonIn">
+                     <button class="svgSide glass" id="glassId">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="glassSvg" viewBox="0 0 16 16">
+                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path></svg>
+                     </button>
+                     <button class="svgSide cart" id="cartId">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="cartSvg" viewBox="0 0 16 16">
+                         <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path></svg>
+                     </button>
+                 </div> 
+         
+                 <div class="sidebarIn"> 
+                     
+                     
+                     <div class="cartList" id="cartListById"></div>
+         
+                    
+     
+         
+                     <div class="glassList">
+                         <button class="order firstSelector" id="uno">Orden</button> 
+                             <button class="order secondSelector">Menor precio</button>
+                             <button class="order secondSelector">Mayor precio</button>
+                         <button class="filter firstSelector" id="dos"> Filtro </button>
+                             <button class="filter brand secondSelector" id="tres">Marca</button>
+                                 <button class="filter brand thirdSelector"> Volkswagen</button>  
+                                 <button class="filter brand thirdSelector"> Chevrolet</button>  
+                                 <button class="filter brand thirdSelector"> Ford</button>  
+                                 <button class="filter brand thirdSelector"> Fiat</button>  
+                                 <button class="filter brand thirdSelector"> Nissan</button>
+                                 <button class="filter brand thirdSelector"> Toyota</button>  
+                                 <button class="filter brand thirdSelector"> Renault</button>       
+                             <button class="filter string secondSelector" id="cuatro">Combustible</button> 
+                                 <button class="filter string thirdSelector">Nafta</button>
+                                 <button class="filter string thirdSelector">Diesel</button>
+                             <button class="filter type secondSelector" id="cinco">Productos</button> 
+                                 <button class="filter type thirdSelector">Motor</button>
+                                 <button class="filter type thirdSelector">Suspencion</button>               
+                                 <button class="filter type thirdSelector">Frenos</button>
+                     </div>
+                
+                    
+                 </div>
+                     <div class="submit"><p class="pSubmit" id="idPSubmit"></p>
+                     <button type="submit" class="btnSubmit" id="idBtnSubmit">Agregar al carrito</button>
+                     </div>
+             </div>
+             
+            <div id="appenIn" class="appendIn">
+                <div class="cardContainer" style="padding: 1em;">
+                    <img src="./img/bielaAmarok.jpg">
+                     <p class="label"><b>Volkswagen<br>Biela Amarok</b></p>
+                     <div class="price"><b>$14.225</b></div>
+                     <p class="details hoverOn">Biela Amarok TDI 2.0</p>
+                     <button class="addToCart hoverOn " id="1ydbi1fnsFpFvKWAZVLk" type="button"><b>Añadir al carrito</b></button>
+                    </div>
+
+                    <div class="cardContainer" style="padding: 1em;">
+                    <img src="./img/bielaClio.jpg">
+                     <p class="label"><b>Renault<br>Biela Clio</b></p>
+                     <div class="price"><b>$6.900</b></div>
+                     <p class="details hoverOn">Biela Renault Clio 1.6 16v</p>
+                     <button class="addToCart hoverOn " id="9KRWIr3JJacoZwcfASwG" type="button"><b>Añadir al carrito</b></button>
+                    </div>
+
+                <div class="cardContainer" style="padding: 1em;">
+                    <img src="./img/BielaCorsa.jpg">
+                     <p class="label"><b>Chevrolet<br>Biela Corsa</b></p>
+                     <div class="price"><b>$6.500</b></div>
+                     <p class="details hoverOn">Biela Chevrolet Corsa 1.6 16v</p>
+                     <button class="addToCart hoverOn " id="JX14GgAefLmGyl1TUIla" type="button"><b>Añadir al carrito</b></button>
+                    </div>
+
+                <div class="cardContainer" style="padding: 1em;">
+                    <img src="./img/bielaFiesta.jpg">
+                     <p class="label"><b>Ford<br>Biela Focus</b></p>
+                     <div class="price"><b>$11.800</b></div>
+                     <p class="details hoverOn">Biela Ford Focus 2.0 16v</p>
+                     <button class="addToCart hoverOn " id="JYwxLPjqy1NT53sCiQl2" type="button"><b>Añadir al carrito</b></button>
+                    </div>
+
+                <div class="cardContainer" style="padding: 1em;">
+                    <img src="./img/bielaFox.jpg">
+                     <p class="label"><b>Toyota<br>Biela Hilux</b></p>
+                     <div class="price"><b>$7.000</b></div>
+                     <p class="details hoverOn">Biela Toyota Hilux 2.8 16v</p>
+                     <button class="addToCart hoverOn " id="NR7iHG99Tl2n5C60L7Ex" type="button"><b>Añadir al carrito</b></button>
+                    </div>
+
+                <div class="cardContainer" style="padding: 1em;">
+                    <img src="./img/bombaAmarok.jpg">
+                     <p class="label"><b>Volkswagen<br>Bomba de agua</b></p>
+                     <div class="price"><b>$11.800</b></div>
+                     <p class="details hoverOn">Bomba de agua Volkswagen Amarok 2.0 TDI</p>
+                     <button class="addToCart hoverOn " id="OAkAwzu2LlndrPzcG4QI" type="button"><b>Añadir al carrito</b></button>
+                    </div>
+
+                <div class="cardContainer" style="padding: 1em;">
+                    <img src="./img/cigueñalAmarok.jpg">
+                     <p class="label"><b>Volkswagen<br>Cigüeñal Amarok</b></p>
+                     <div class="price"><b>$90.000</b></div>
+                     <p class="details hoverOn">Cigüeñal Volkswagen Amarok 2.0 TDI 16v</p>
+                     <button class="addToCart hoverOn " id="OCGRFjreJ4dIADygHdpu" type="button"><b>Añadir al carrito</b></button>
+                    </div>
+
+                <div class="cardContainer" style="padding: 1em;">
+                    <img src="./img/inyectorAmarok.jpg">
+                     <p class="label"><b>Volkswagen<br>Inyector Amarok</b></p>
+                     <div class="price"><b>$64.290</b></div>
+                     <p class="details hoverOn">Inyector Bosch Volkswagen Amarok 2.0 TDI 16v</p>
+                     <button class="addToCart hoverOn " id="OoRfdGjULgmYk2VDhRjC" type="button"><b>Añadir al carrito</b></button>
+                    </div>
+
+                <div class="cardContainer" style="padding: 1em;">
+                    <img src="./img/inyectorCorsa.jpg">
+                     <p class="label"><b>Chevrolet<br>Inyector Corsa</b></p>
+                     <div class="price"><b>$6.700</b></div>
+                     <p class="details hoverOn">Inyector Bosch Chevrolet Corsa 1.6 16v</p>
+                     <button class="addToCart hoverOn " id="S2AIIeLvmjEQ8kD7IpD2" type="button"><b>Añadir al carrito</b></button>
+                    </div>
+
+                <div class="cardContainer" style="padding: 1em;">
+                    <img src="./img/amortiguadorAmarok.jpg">
+                     <p class="label"><b>Volkswagen<br>Amortiguadores Amarok</b></p>
+                     <div class="price"><b>$24.500</b></div>
+                     <p class="details hoverOn">Kit de 2 Amortiguadores Volkswagen Amarok TDI</p>
+                     <button class="addToCart hoverOn " id="S2AIIeLvmjEQ8kD7IpD2" type="button"><b>Añadir al carrito</b></button>
+                    </div>
+
+                <div class="cardContainer" style="padding: 1em;">
+                    <img src="./img/discoNissan.jpg">
+                     <p class="label"><b>Nissan<br>Discos de freno</b></p>
+                     <div class="price"><b>$21.100</b></div>
+                     <p class="details hoverOn">Kit de discos de freno Nissan Frontier</p>
+                     <button class="addToCart hoverOn " id="S2AIIeLvmjEQ8kD7IpD2" type="button"><b>Añadir al carrito</b></button>
+                    </div>
+
+                <div class="cardContainer" style="padding: 1em;">
+                    <img src="./img/amortiguadorRaptor.jpg">
+                     <p class="label"><b>Ford<br>Amortiguadores Raptor</b></p>
+                     <div class="price"><b>$60.500</b></div>
+                     <p class="details hoverOn">Kit de amortiguadores Ford Raptor</p>
+                     <button class="addToCart hoverOn " id="S2AIIeLvmjEQ8kD7IpD2" type="button"><b>Añadir al carrito</b></button>
+                    </div>
+             </div>
+         </main>
+     
+     
+        
+     
+         <footer id="footerId">
+             <div>
+                 <h2>Nuestras Redes</h2>
+                 <p><a href="#">facebook</a></p>
+                 <p><a href="#">twitter</a></p>
+                 <h2>Ayuda y contacto</h2>
+                 <p><a href="#">Centro de informacion</a></p>
+                 <p><a href="#">Contactos</a></p>
+             </div>
+             <div>
+                 <h2>Sobre Drewanz Motors</h2>
+                 <p><a href="#">Información</a></p>
+                 <p><a href="#">Noticias</a></p>
+                 <p><a href="#">Inventario</a></p>
+                 <p><a href="#">Publicidad</a></p>
+                 <p><a href="#">Políticas</p>
+             </div>
+         </footer>
+         <script src="./js/card.js"></script>
+         <script src="./js/main.js" type="module"></script>
+     <!-- Code injected by live-server -->
+     <script type="text/javascript">
+         // <![CDATA[  <-- For SVG support
+         if ('WebSocket' in window) {
+             (function () {
+                 function refreshCSS() {
+                     var sheets = [].slice.call(document.getElementsByTagName("link"));
+                     var head = document.getElementsByTagName("head")[0];
+                     for (var i = 0; i < sheets.length; ++i) {
+                         var elem = sheets[i];
+                         var parent = elem.parentElement || head;
+                         parent.removeChild(elem);
+                         var rel = elem.rel;
+                         if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                             var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                             elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                         }
+                         parent.appendChild(elem);
+                     }
+                 }
+                 var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                 var address = protocol + window.location.host + window.location.pathname + '/ws';
+                 var socket = new WebSocket(address);
+                 socket.onmessage = function (msg) {
+                     if (msg.data == 'reload') window.location.reload();
+                     else if (msg.data == 'refreshcss') refreshCSS();
+                 };
+                 if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                     console.log('Live reload enabled.');
+                     sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                 }
+             })();
+         }
+         else {
+             console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+         }
+         // ]]>
+     </script>
+     
+     
+     </body>
+    
+</html>
+ 
